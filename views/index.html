@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://globalsymbols.com/uploads/production/image/imagefile/4105/13_4105_847a55fa-3dc4-451f-acad-48c533ce05a9.svg"
+    />
+    <title>EasyDefine - Easy Definition and Translation</title>
+    <!-- Javascript -->
+    <script src="/script.js"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e3e232e975.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="logo">
+      <h1 id="word-header">EasyDefine</h1>
+      <p id="description">
+        Definitions, Etymology, and Translations. Displayed Simply.
+      </p>
+    </div>
+    <form onsubmit="getWordInfo();return false" class="url-form" id="enterbox">
+      <input
+        id="inputField"
+        placeholder="enter a word"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        required
+        autofocus
+      />
+      <i
+        onclick="getWordInfo()"
+        id="goButton"
+        class="fas fa-arrow-circle-right"
+      ></i>
+    </form>
+
+    <!--
+  The following Divs are Hidden on page Load, and are only revealed once the data is loaded
+  -->
+    <div id="definition">
+      <br /><br />
+      <h2 class="title">Definitions:</h2>
+      <div class="loader"></div>
+      <h3 class="text"></h3>
+    </div>
+    <div id="syllables">
+      <br/>
+      <h2 class="title">Syllables:</h2>
+      <div class="loader"></div>
+      <h3 class="text"></h3>
+    </div>
+        <div id="similar">
+      <br/>
+      <h2 class="title">Similar Words:</h2>
+      <div class="loader"></div>
+<table class = "table">
+  <tr>
+    <th>Synonyms</th>
+    <th>Antonyms</th>
+  </tr>
+</table>
+    </div>
+    <input id="altoption" type="button" value="Enter a Vocab List Instead" />
+    <br />
+    <footer>
+      <p>
+        Designed by Carcraftz and Smuke
+      </p>
+      <div>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="#" target="_blank"><i class="fas fa-envelope-open"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
